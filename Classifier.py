@@ -2,7 +2,7 @@ import streamlit as st
 from transformers import pipeline
 
 # Load pre-trained text classification model
-text_classifier = pipeline("text-classification")
+text_classifier = pipeline("text-classification", model="text-classification", revision="text-classification-en-finetuned-sentiment")
 
 # Create a text input box for the user to enter feedback
 feedback = st.text_input('Enter your feedback:', value='The product was great, but the delivery was delayed.')
