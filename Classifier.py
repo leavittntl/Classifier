@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 from transformers import pipeline
 
@@ -13,7 +14,6 @@ results = text_classifier(feedback)
 
 # Display the classification results
 st.write('Classification results:')
-for i, result in enumerate(results):
-    NPSPlusVal = (f"Feedback {i+1}: Category: {result['label']}, Score: {result['score']}")
-    st.write(NPSPlusVal)
+NPSPlusVal = (f"Feedback {i+1}: Category: {result['label']}, Score: {result['score']}")
+st.write(NPSPlusVal)
 
