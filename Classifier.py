@@ -12,12 +12,12 @@ feedback = st.text_input('Enter your feedback:', value='The product was great, b
 # Classify the feedback into different topics
 results = text_classifier(feedback)
 
-parsed_results = json.loads(results)
-
+label = results[0]['label']
+score = results[0]['score']
 
 # Display the classification results
 st.write('Classification results:')
-#NPSPlusVal = (f"Feedback: Category: {results.label}, {results.score}")
+NPSPlusVal = (f"Feedback: Category: {label}, {score}")
 st.write(results)
-#st.write(NPSPlusVal)
+st.write(NPSPlusVal)
 
