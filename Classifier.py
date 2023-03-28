@@ -14,7 +14,7 @@ results = text_classifier(feedback)
 
 # Display the classification results
 st.write('Classification results:')
-NPSPlusVal = (f"Feedback: Category: {results.label}, {results.score}")
+#NPSPlusVal = (f"Feedback: Category: {results.label}, {results.score}")
 st.write(results)
-st.write(NPSPlusVal)
+#st.write(NPSPlusVal)
 
